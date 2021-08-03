@@ -21,7 +21,7 @@ cd g1scraper
 ```
 
 
-E instalar as dependências:
+E em seguida instalar as dependências:
 ```bash
 pip install -r requirements.txt
 ```
