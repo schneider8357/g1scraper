@@ -2,25 +2,33 @@
 
 Biblioteca que busca as notícias da página inicial dos portais G1 e GE utilizando web scraping.
 
-O g1scraper utiliza a biblioteca beautifulsoup4, disponível na PyPI, para realizar o scraping. A biblioteca Flask é utilizada para hospedar a aplicação web que serve como API do g1scraper.
+O `g1scraper` utiliza a biblioteca beautifulsoup4, disponível na PyPI, para realizar o scraping. A biblioteca Flask é utilizada para a aplicação web que serve como API do `g1scraper`.
+
+## Execução com docker
+
+A forma mais simples de executar o `g1scraper` é com a imagem docker:
+
+ ```bash
+ docker run -p8080:8080 --rm schneider8357/g1scraper
+ ```
 
 ## Instalação
 
-Clonar o repositório:
+Para instalar o `g1scraper` localmente, é preciso primeiramente clonar o repositório:
 ```bash
 git clone https://github.com/schneider8357/g1scraper
 cd g1scraper
 ```
 
 
-Instalar as dependências:
+E instalar as dependências:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Execução
 
-Para iniciar o `g1scraper`, pode-se utilizar o `gunicorn`:
+Uma vez instalado, para iniciar o `g1scraper` pode-se utilizar o `gunicorn`:
 
 ```bash
 gunicorn -w 4 -b 0.0.0.0:8080 g1scraper.app:app
