@@ -6,7 +6,7 @@ O `g1scraper` utiliza a biblioteca beautifulsoup4, disponível na PyPI, para rea
 
 ## Execução com docker
 
-A forma mais simples de executar o `g1scraper` é com a imagem docker:
+A forma mais simples de executar o `g1scraper` é com a [imagem docker](https://hub.docker.com/repository/docker/schneider8357/g1scraper):
 
  ```bash
  docker run -p8080:8080 --rm schneider8357/g1scraper
