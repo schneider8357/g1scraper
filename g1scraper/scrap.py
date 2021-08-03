@@ -20,7 +20,7 @@ def get_closing_bracket(string, indice_inicio):
             return atual # O '}' correpondente foi encontrado
     raise ValueError("String invalida")
 
-def get_noticias(url, classe_noticia, classe_titulo, classe_subtitulo):
+def get_noticias(url):
     """Retorna as noticias com titulo e subtitulo em uma lista."""
     pagina = requests.get(url)
     soup = BeautifulSoup(pagina.text, 'html.parser')
